@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  buildx_gc:
+    image: buildx_gc:latest
+    build:
+      context: .
+    container_name: buildx_gc
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      # Синтаксис ${VAR:-default} задает значение по умолчанию, если переменная не объявлена
+      - AGE=${AGE:-24h}
+      - SLEEP=${SLEEP:-1h}
+      - STICKY_LABEL=${STICKY_LABEL:-}
+    restart: always
