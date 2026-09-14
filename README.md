@@ -61,3 +61,14 @@ docker buildx create --name my_protected_builder --driver-opt labels=persistent_
 ```bash
 docker compose up -d
 ```
+---
+
+See also: https://github.com/pdacity/docker_gc
+
+---
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=pdacity/buildx_gc&type=Timeline)](https://star-history.com/#pdacity/buildx_gc&Timeline)
+
+
